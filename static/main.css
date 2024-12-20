@@ -1,0 +1,14 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    color:red;
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
