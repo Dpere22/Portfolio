@@ -14,7 +14,13 @@
             <a href="https://www.linkedin.com/in/diego-perez-uu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
     </div>
-
     <a href="/Ditalini/">What is Ditalini</a>
+    <div class = "projects">
+        {% for project in projects %}
+            <div class="project">
+                <img src = "{{ project.thumbnail.url }}" alt = "thumbnail for {{ project.title }}">
+            </div>
+        {% endfor %}
+    </div>
 </main>
 </html>
