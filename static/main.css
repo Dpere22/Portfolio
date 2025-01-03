@@ -1,7 +1,30 @@
 html{
-    background-color: deepskyblue;
+    background-color: #3b4351;
+    font-family: "Space Mono", serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+main{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.header{
+    background-color: lightgray;
+    border: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+    height: 40px;
 }
 .card{
+    text-align: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10%;
     padding-bottom: 30px;
     padding-top: 30px;
@@ -9,7 +32,7 @@ html{
     justify-self: center;
     display: flex;
     flex-direction: row;
-    background-color: lightgray;
+    background-color: #7e859a;
     width: 50%;
     justify-content: space-around;
     align-items: center;
@@ -23,11 +46,15 @@ html{
     }
     img{
         margin: 0.5rem;
-        border-radius: 50%;
-        width: 160px;
-        height: 160px;
-        border: 1px solid black;
+        width: 200px;
+        height: 200px;
     }
+}
+
+.card-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .links{
     display: flex;
@@ -37,8 +64,40 @@ html{
         border-radius: 5%;
         margin: 10px;
         padding: 10px;
-        background-color:lightgreen;
+        background-color: white;
         text-decoration: none;
         color: black;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.1s ease;
     }
+}
+
+.project{
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 150px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.1s ease;
+    img{
+        border-radius: 10%;
+        width: 100px;
+        padding-top: 5px;
+    }
+}
+
+.project:hover, a:hover {
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5); /* Larger, darker shadow */
+  background-color: #e0e0e0; /* Slightly darker background */
+  transform: scale(1.05); /* Slightly increase size */
+}
+
+.section-title{
+    text-decoration: underline;
+    font-size: 50px;
+    text-align: center;
 }

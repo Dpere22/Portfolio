@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include "header.html" %}
-<main>
-    <div class="card">
-        <div>
-            <img src="/static/Headshot.jpg" alt="Diego's Headshot" width="150" height=auto>
-            <h1>Diego Perez</h1>
-            <p>Games Software Engineer</p>
-        </div>
-        <div class = "links">
-            <a href="https://drive.google.com/file/d/1ih5eqKvnmu2JFIs6GeXLbAP-8bxtwbL3/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a>
-            <a href="mailto:dpuu26@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/diego-perez-uu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-    </div>
-    <a href="/Ditalini/">What is Ditalini</a>
-    <div class = "projects">
-        {% for project in projects %}
-            <div class="project">
-                <img src = "{{ project.thumbnail.url }}" alt = "thumbnail for {{ project.title }}">
+<body>
+    <main>
+        <div class = "card-holder">
+            <div class="card">
+                <div>
+                    <img src="/static/Headshot.jpg" alt="Diego's Headshot">
+                    <h1>Diego Perez</h1>
+                    <p>Games Software Engineer</p>
+                </div>
+                <div class = "links">
+                    <a href="https://drive.google.com/file/d/1ih5eqKvnmu2JFIs6GeXLbAP-8bxtwbL3/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a href="mailto:dpuu26@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/diego-perez-uu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
             </div>
-        {% endfor %}
-    </div>
-</main>
+        </div>
+        <h1 class="section-title"> Projects </h1>
+    
+        <div class = "projects">
+            {% for project in projects %}
+                <div class = "project">
+                    <img src = "{{ project.thumbnail.url }}" alt = "thumbnail for {{ project.title }}">
+                    <p> {{ project.title }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+
 </html>
