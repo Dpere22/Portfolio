@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include "header.html" %}
+<script type=module src="/static/main.js"></script>
 <body>
     <main>
         <div class = "card-holder">
@@ -21,7 +22,7 @@
     
         <div class = "projects">
             {% for project in projects %}
-                <div class = "project">
+                <div class = "project" data-href="/{{ project.title }}">
                     <img src = "{{ project.thumbnail.url }}" alt = "thumbnail for {{ project.title }}">
                     <p> {{ project.title }}</p>
                 </div>
