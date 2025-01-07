@@ -1,6 +1,6 @@
 html{
     background-color: #3b4351;
-    font-family: "Space Mono", serif;
+    font-family: "Ibarra Real Nova", serif;
     padding: 0;
     margin: 0;
     border: 0;
@@ -43,6 +43,7 @@ main{
     }
     h1{
         margin: 0;
+        font-size: 40px;
     }
     img{
         margin: 0.5rem;
@@ -84,7 +85,7 @@ main{
     width: 150px;
     align-items: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.1s ease;
     img{
