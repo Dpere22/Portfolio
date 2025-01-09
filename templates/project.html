@@ -1,8 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 {% include "header.html" %}
-<body>
-<h1> {{ project.title}} </h1>
-{{ project.description|safe }}
-</body>
+    <body>
+        <h1 class="section-title"> {{ project.title}} </h1>
+        <div class="project-container">
+            <span>
+                {{ project.description|safe }}
+            </span>
+        </div>
+    </body>
 </html>

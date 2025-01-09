@@ -1,9 +1,10 @@
 html{
-    background-color: #3b4351;
+    background-color: #290628;
     font-family: "Ibarra Real Nova", serif;
     padding: 0;
     margin: 0;
     border: 0;
+    color: lightgrey;
 }
 body{
     padding: 0;
@@ -15,12 +16,25 @@ main{
     padding-right: 5%;
 }
 .header{
-    background-color: lightgray;
+    background-color: #3B0086;
     border: 0;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
     margin: 0;
-    height: 40px;
+    height: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    a{
+        text-decoration: none;
+        font-size: 22px;
+        margin-right: 25px;
+        color: white;
+    }
+}
+.card, .project{
+    background-color: #B43E8F;
+    color: black;
 }
 .card{
     text-align: center;
@@ -32,24 +46,43 @@ main{
     justify-self: center;
     display: flex;
     flex-direction: row;
-    background-color: #7e859a;
-    width: 50%;
+    width: 35%;
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    p{
-        font-weight: bold;
-        margin: 0;
-    }
     h1{
         margin: 0;
         font-size: 40px;
+    }
+    h2{
+        font-size: 18px;
     }
     img{
         margin: 0.5rem;
         width: 200px;
         height: 200px;
-        border: 3px solid black;
+        border-radius: 5%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        a{
+            color: black;
+            border-radius: 5%;
+            margin: 10px;
+            padding: 10px;
+            background-color: #cf6dd9;
+            text-decoration: none;
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.1s ease;
+        }
+    }
+    a:hover{
+        box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5); /* Larger, darker shadow */
+        background-color: #e0e0e0; /* Slightly darker background */
+        transform: scale(1.05); /* Slightly increase size */
     }
 }
 
@@ -58,21 +91,7 @@ main{
     flex-direction: row;
     justify-content: center;
 }
-.links{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    a{
-        border-radius: 5%;
-        margin: 10px;
-        padding: 10px;
-        background-color: white;
-        text-decoration: none;
-        color: black;
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-        transition: box-shadow 0.1s ease;
-    }
-}
+
 
 .project{
     margin-top: 10px;
@@ -81,28 +100,29 @@ main{
     border-radius: 10%;
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
-    width: 150px;
+    width: 200px;
+    height: 230px;
     align-items: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.1s ease;
+    text-align: center;
     img{
         border-radius: 10%;
-        width: 100px;
-        padding-top: 5px;
+        width: 80%;
+        height: 80%;
+        margin-top: 15px;
     }
 }
 
-.project:hover, a:hover {
+.project:hover{
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5); /* Larger, darker shadow */
   background-color: #e0e0e0; /* Slightly darker background */
   transform: scale(1.05); /* Slightly increase size */
 }
 
 .section-title{
-    text-decoration: underline;
     font-size: 50px;
     text-align: center;
 }
@@ -112,13 +132,26 @@ main{
     flex-flow: row wrap;
 }
 
+.project-holder{
+    display: flex;
+    justify-content: center;
+}
+.project-container{
+    display: flex;
+    font-size: 22px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 @media (max-width: 768px){
     .card{
         flex-direction: column;
-        width: 70%;
+        width: 80%;
     }
-    .links{
-        width: 50%;
+    .card{
+        .links{
+            width: 75%;
+        }
     }
     .projects{
         flex-direction: column;
@@ -127,11 +160,6 @@ main{
     .project{
         margin-right: 0;
         margin-top: 15px;
-        width: 50%;
-        height: 200px;
-        img{
-            width: 125px;
-            height: 125px;
-        }
+        width: 100%;
     }
 }

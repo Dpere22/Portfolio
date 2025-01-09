@@ -9,7 +9,7 @@
                 <div>
                     <img src="/static/Headshot.jpg" alt="Diego's Headshot">
                     <h1>Diego Perez</h1>
-                    <p>Games Software Engineer</p>
+                    <h2>Software Engineer</h2>
                 </div>
                 <div class = "links">
                     <a href="https://drive.google.com/file/d/1ih5eqKvnmu2JFIs6GeXLbAP-8bxtwbL3/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a>
@@ -19,14 +19,15 @@
             </div>
         </div>
         <h1 class="section-title"> Projects </h1>
-    
-        <div class = "projects">
-            {% for project in projects %}
-                <div class = "project" data-href="/{{ project.title }}">
-                    <img src = "{{ project.thumbnail.url }}" alt = "thumbnail for {{ project.title }}">
-                    <p> {{ project.title }}</p>
-                </div>
-            {% endfor %}
+        <div class="project-holder">
+            <div class = "projects">
+                {% for project in projects %}
+                    <div class = "project" data-href="/{{ project.title }}">
+                        <img src = "{{ project.thumbnail.url }}" alt = "thumbnail for {{ project.title }}">
+                        <p> {{ project.title }}</p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </main>
 </body>
