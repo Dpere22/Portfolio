@@ -16,7 +16,7 @@ main{
     padding-right: 5%;
 }
 nav{
-    background-color: rgba(109,67,152, 0.5);
+    background-color: rgba(109,67,152, 1);
     border: 0;
     padding: 10px 3%;
     margin: 20px 120px 20px;
@@ -35,7 +35,7 @@ nav{
     }
 }
 .card, .project{
-    background-color: #c36a96;
+    background-color: #bd608e;
     color: #131313;
 }
 .card{
@@ -179,11 +179,9 @@ p{
     margin-top: 30px;
 }
 iframe{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 20px;
     width: 80%;
     height: 650px;
+    margin: 15px 10% 20px;
 }
 @media (max-width: 768px){
     .projects{
