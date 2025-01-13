@@ -12,8 +12,8 @@ body{
     border: 0;
 }
 main{
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 nav{
     background-color: rgba(109,67,152, 1);
@@ -112,7 +112,6 @@ nav{
 
 .project{
     margin-top: 10px;
-    margin-right: 50px;
     margin-bottom: 30px;
     border-radius: 10%;
     display: flex;
@@ -148,6 +147,7 @@ nav{
     display: flex;
     flex-flow: row wrap;
     margin-top: 10px;
+    gap: 50px;
 }
 
 .project-holder{
