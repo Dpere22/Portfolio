@@ -145,6 +145,9 @@ nav{
 
 .projects{
     display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
     flex-flow: row wrap;
     margin-top: 10px;
     gap: 50px;
