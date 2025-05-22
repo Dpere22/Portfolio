@@ -16,6 +16,10 @@ main{
     margin-right: 5%;
 }
 nav{
+    .nav-left{
+        display: flex;
+        flex-direction: row;
+    }
     background-color: rgba(109,67,152, 1);
     border: 0;
     padding: 10px 3%;
@@ -203,10 +207,10 @@ a{
 @media (max-width: 768px){
     main{
         margin: 0;
+        all: unset
     }
     .projects{
         margin: 0;
-        width: 60%;
         flex-direction: column;
         align-items: center;
     }
@@ -243,25 +247,11 @@ a{
             margin-bottom: 0;
         }
     }
-    .project-container{
-        font-size: 20px;
-        margin-right: 5%;
-        margin-left: 5%;
-        img{
-            width: 100%;
-            height: 250px;
-            margin-right: 0;
-            margin-left: 0;
-        }
-    }
     iframe{
         width: 100%;
         height: 250px;
         margin-right: 0;
         margin-left: 0;
-    }
-    .project-holder{
-        margin: 0;
     }
 }
 
