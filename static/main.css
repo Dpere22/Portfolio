@@ -112,6 +112,7 @@ nav{
 
 
 .project{
+    text-decoration: none;
     margin-top: 10px;
     margin-bottom: 30px;
     border-radius: 10%;
@@ -280,10 +281,6 @@ a{
     }
     nav{
         margin: 30px 200px 10px;
-    }
-    .project{
-        width: 250px;
-        height: 275px;
     }
     .project-container{
         font-size: 28px;
