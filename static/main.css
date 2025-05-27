@@ -128,6 +128,8 @@ nav{
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.1s ease;
     text-align: center;
+    height: 330px;
+    width: 300px;
     h2{
         all: unset;
         font-size: 30px;
@@ -137,8 +139,8 @@ nav{
     img{
         border-radius: 20%;
         margin-top: 15px;
-        max-width: 100%;
-        max-height: 250px;
+        max-width: 250px;
+        max-height: 300px;
         height: auto;
         width: auto;
         padding-left: 20px;
