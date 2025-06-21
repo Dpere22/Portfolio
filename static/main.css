@@ -207,6 +207,13 @@ a{
     color: #b57997
 }
 @media (max-width: 768px){
+    .project-container{
+        all: unset;
+    }
+    p, h1, h2, h3,a {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
     main{
         margin: 0;
         all: unset
