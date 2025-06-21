@@ -40,7 +40,7 @@ nav{
 
 }
 .card, .project{
-    background-color: #be95c3;
+    background-color: #a47aa8;
     color: #131313;
 }
 .card{
@@ -100,6 +100,9 @@ nav{
             transition: box-shadow 0.1s ease;
             font-size: 20px;
             font-weight: bold;
+            align-items: center;
+            display: inline-flex;
+            justify-content: center;
         }
     }
     a:hover{
@@ -197,9 +200,7 @@ p{
     margin-top: 30px;
 }
 .yt{
-    width: 80%;
-    height: 650px;
-    margin: 15px 10% 20px;
+    aspect-ratio: 16 / 9;
 }
 footer{
     height: 500px;
@@ -210,6 +211,10 @@ a{
 @media (max-width: 768px){
     .project-container{
         all: unset;
+        img{
+            margin: 15px 0;
+            width: 100%;
+        }
     }
     p, h1, h2, h3,a {
         margin-left: 5%;
@@ -221,15 +226,13 @@ a{
     }
     .projects{
         margin: 0;
-        flex-direction: column;
-        align-items: center;
     }
     nav{
         margin: 15px 10px 0;
     }
     .card{
         flex-direction: column;
-        width: 75%;
+        width: 85%;
         height: 500px;
         padding-bottom: 5px;
         img{
@@ -240,6 +243,7 @@ a{
         .me{
             all:unset;
             height: 50%;
+            margin-bottom: 10px;
         }
         .links{
             height: 50%;
@@ -264,9 +268,8 @@ a{
     }
     .yt{
         width: 100%;
-        height: 250px;
-        margin-right: 0;
-        margin-left: 0;
+        margin-top: 10px;
+        height: auto;
     }
 }
 
