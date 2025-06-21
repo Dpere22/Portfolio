@@ -37,6 +37,7 @@ nav{
         color: white;
         font-weight: bold;
     }
+
 }
 .card, .project{
     background-color: #be95c3;
@@ -224,8 +225,7 @@ a{
         align-items: center;
     }
     nav{
-        border-radius: 0;
-        margin: 0;
+        margin: 15px 10px 0;
     }
     .card{
         flex-direction: column;
