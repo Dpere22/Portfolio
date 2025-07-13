@@ -48,7 +48,7 @@ nav{
     justify-self: center;
     display: flex;
     flex-direction: row;
-    height: 350px;
+    height: 250px;
     justify-content: space-around;
     align-items: center;
     align-content: center;
@@ -57,7 +57,7 @@ nav{
         font-size: 30px;
     }
     img{
-        max-height: 70%;
+        max-height: 100%;
         height: auto;
         width: auto;
         border-radius: 20px;
@@ -78,8 +78,8 @@ nav{
         height: 100%;
         margin-left: 20px;
         align-content: space-between;
-        justify-content: flex-start;
-        gap: 25px;
+        justify-content: center;
+        gap: 30px;
         #resume-link {
             background-color: lightgrey;
         }
@@ -117,6 +117,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
     .precard {
         h2{
             font-size: 18px;
@@ -256,6 +257,10 @@ a{
         .links{
             height: 50%;
             width: 75%;
+            align-items: center;
+            #resume-link, #email-link, #linkedin-link {
+                width: 200px;
+            }
         }
         h2{
             font-size: 18px;
