@@ -39,13 +39,9 @@ nav{
     }
 
 }
-.card, .project{
-    background-color: #a47aa8;
-    color: #131313;
-}
 .card{
+    color: white;
     text-align: center;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     border-radius: 70px;
     padding-bottom: 30px;
     padding-top: 30px;
@@ -87,6 +83,15 @@ nav{
         height: 100%;
         margin-left: 20px;
         align-content: center;
+        #resume-link {
+            background-color: lightgrey;
+        }
+        #email-link {
+            background-color: lightgrey;
+        }
+        #linkedin-link{
+            background-color: #0077B5;
+        }
         a{
             margin-bottom: 40px;
             margin-top: 10px;
@@ -120,6 +125,7 @@ nav{
 
 
 .project{
+    color: white;
     text-decoration: none;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -129,11 +135,8 @@ nav{
     align-items: center;
     font-weight: bold;
     font-size: 24px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.1s ease;
     text-align: center;
-    height: 330px;
-    width: 300px;
     h2{
         all: unset;
         font-size: 30px;
@@ -141,20 +144,17 @@ nav{
         padding-bottom: 15px;
     }
     img{
+        border: 8px solid black;
         border-radius: 20%;
         margin-top: 15px;
-        max-width: 250px;
-        max-height: 300px;
-        height: auto;
-        width: auto;
-        padding-left: 20px;
-        padding-right: 20px;
+        /*max-width: 350px;*/
+        /*max-height: 350px;*/
+        height: 325px;
+        width: 300px;
     }
 }
 
 .project:hover{
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
-  background-color: #f5afd5;
   transform: scale(1.05);
 }
 
