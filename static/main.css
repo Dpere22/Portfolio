@@ -43,46 +43,43 @@ nav{
     color: white;
     text-align: center;
     border-radius: 70px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    margin-top: 2rem;
+    padding-top: 0;
+    margin-top: 0;
     justify-self: center;
     display: flex;
     flex-direction: row;
-    width: 70%;
     height: 350px;
     justify-content: space-around;
     align-items: center;
     align-content: center;
     h1{
         margin: 0;
-        font-size: 36px;
-    }
-    h2{
-        font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 0;
+        font-size: 30px;
     }
     img{
         max-height: 70%;
         height: auto;
         width: auto;
-        margin: 0.5rem;
         border-radius: 20px;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        margin: 0.5rem 0.5rem 0.5rem 0;
     }
     .me{
-        padding-left: 5%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     .links{
         padding-right: 5%;
         display: flex;
         flex-direction: column;
-        width: 45%;
+        width: 300px;
         height: 100%;
         margin-left: 20px;
-        align-content: center;
+        align-content: space-between;
+        justify-content: flex-start;
+        gap: 25px;
         #resume-link {
             background-color: lightgrey;
         }
@@ -93,7 +90,6 @@ nav{
             background-color: #0077B5;
         }
         a{
-            margin-bottom: 40px;
             margin-top: 10px;
             height: 10%;
             color: #131313;
@@ -119,10 +115,20 @@ nav{
 
 .card-holder{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .precard {
+        h2{
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
 }
 
+#project-title{
+    margin-top: 0;
+}
 
 .project{
     color: white;
@@ -230,6 +236,11 @@ a{
     nav{
         margin: 15px 10px 0;
     }
+    .card-holder{
+        h1 {
+            font-size: 26px;
+        }
+    }
     .card{
         flex-direction: column;
         width: 85%;
@@ -237,23 +248,14 @@ a{
         padding-bottom: 5px;
         img{
             margin: 0;
-            height: 70%;
-            width: 80%;
+            max-height: 225px;
         }
         .me{
             all:unset;
-            height: 50%;
-            margin-bottom: 10px;
         }
         .links{
             height: 50%;
             width: 75%;
-            a{
-                margin-bottom: 10px;
-            }
-        }
-        h1{
-            font-size: 32px;
         }
         h2{
             font-size: 18px;
