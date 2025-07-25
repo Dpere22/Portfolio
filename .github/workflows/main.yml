@@ -18,9 +18,8 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.EC2_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          # Replace with your actual EC2 public DNS or IP
-          ssh-keyscan -H ec2-18-218-241-83.us-east-2.compute.amazonaws.com >> ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.EC2_HOST_NAME }} >> ~/.ssh/known_hosts
 
       - name: Deploy to EC2
         run: |
-          ssh -i ~/.ssh/id_rsa ec2-18-218-241-83.us-east-2.compute.amazonaws.com 'echo Hello from EC2!'
+          ssh -i ~/.ssh/id_rsa ${{ secrets.EC2_HOST_NAME }} 'echo Hello from EC2!'
