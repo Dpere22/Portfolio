@@ -87,7 +87,7 @@ nav{
             background-color: lightgrey;
         }
         #linkedin-link{
-            background-color: #0077B5;
+            background-color: lightgrey;
         }
         a{
             margin-top: 10px;
@@ -151,12 +151,11 @@ nav{
         padding-bottom: 15px;
     }
     img{
-        border: 8px solid black;
         border-radius: 20%;
         margin-top: 15px;
         /*max-width: 350px;*/
         /*max-height: 350px;*/
-        height: 325px;
+        height: 300px;
         width: 300px;
     }
 }
@@ -241,6 +240,15 @@ a{
         h1 {
             font-size: 26px;
         }
+    }
+    .precard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .name-holder{
+        align-self: flex-start;
+        width: 100%;
     }
     .card{
         flex-direction: column;
