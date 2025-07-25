@@ -18,8 +18,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.EC2_PRIVATE_KEY }}" > ~/key.pem
           chmod 400 ~/key.pem
-          ssh-keyscan -H ubuntu@18.218.241.83 >> ~/.ssh/known_hosts
-          ssh -i PortfolioKP2.pem ubuntu@18.218.241.83
+          ssh-keyscan -H 18.218.241.83 >> ~/.ssh/known_hosts
 
 
       - name: Deploy to EC2
