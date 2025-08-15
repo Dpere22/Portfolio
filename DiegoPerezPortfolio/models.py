@@ -18,7 +18,7 @@ class Project(models.Model):
     short_description = models.TextField(default="", blank=True, max_length=500)
     thumbnail = models.ImageField(blank=True, null=True)
     skills = models.ManyToManyField(Skill, related_name="projects")
-    ## need a way for a list of images maybe
+    archived = models.BooleanField(default=False)
     def __str__(self):
         return self.title
 

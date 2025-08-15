@@ -17,7 +17,7 @@ main{
 }
 .name{
     color: white;
-    font-size: 70px;
+    font-size: 64px;
     text-align: center;
     margin-bottom: 0;
     margin-top: 0;
@@ -53,7 +53,6 @@ nav{
 }
 .card{
     color: white;
-    margin-bottom: 30px;
     text-align: center;
     border-radius: 70px;
     padding-top: 0;
@@ -73,56 +72,40 @@ nav{
         max-height: 100%;
         height: auto;
         width: auto;
-        border-radius: 20px;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-        margin: 0.5rem 0.5rem 0.5rem 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
     .me{
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
     }
     .links{
         padding-right: 5%;
+        padding-left: 5%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
         display: flex;
         flex-direction: column;
-        width: 300px;
         height: 100%;
-        margin-left: 20px;
         align-content: space-between;
         justify-content: center;
-        gap: 30px;
-        #resume-link {
-            background-color: white;
-        }
-        #email-link {
-            background-color: white;
-        }
-        #linkedin-link{
-            background-color: white;
-        }
+        background-color: white;
+        gap: 20px;
         a{
-            margin-top: 10px;
-            height: 10%;
-            color: #131313;
-            border-radius: 10px;
-            padding: 10px;
-            background-color: #e8e8e8;
+            height: 25%;
             text-decoration: none;
-            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
             transition: box-shadow 0.1s ease;
             font-size: 20px;
             font-weight: bold;
-            align-items: center;
-            display: inline-flex;
+            display: flex;
             justify-content: center;
+            border-radius: 20px;
+            img{
+                border-radius: 0;
+            }
         }
     }
     a:hover{
-        box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
-        background-color: #e0e0e0;
-        transform: scale(1.05);
+        transform: scale(1.2);
     }
 }
 
@@ -130,14 +113,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
-    .precard {
-        h2{
-            font-size: 18px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-    }
+    margin-bottom: 80px;
 }
 
 .main-content{
@@ -149,7 +125,7 @@ nav{
 .project-holder{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 65%;
     gap: 50px;
 }
 .project{
@@ -160,7 +136,7 @@ nav{
     width: 100%;
     flex-direction: row;
     gap: 30px;
-    height: 375px;
+    height: 300px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
@@ -176,12 +152,13 @@ nav{
         margin-bottom: 10px;
     }
     .left {
-        flex: 0 0 400px;       /* fixed width for all images */
+        flex: 0 0 40%;       /* fixed width for all images */
         height: 100%;
         overflow: hidden;      /* ensures image doesn't overflow corners */
     }
     .right {
         margin-right: 30px;
+        flex: 1;
     }
 
     .left img {
@@ -233,7 +210,6 @@ nav{
     }
 }
 
-
 .section-title{
     font-size: 60px;
     text-align: center;
@@ -255,6 +231,31 @@ a{
     color: #b57997
 }
 @media (max-width: 768px){
+    .project{
+        gap: 0;
+        flex-direction: column;
+        height: 500px;
+        .left {
+            flex: 0 0 50%;       /* fixed width for all images */
+            height: 100%;
+            overflow: hidden;      /* ensures image doesn't overflow corners */
+        }
+        .left img{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0;
+        }
+    }
+    .project-holder{
+        width: 90%;
+    }
+    .name{
+        font-size: 40px;
+        margin-top: 20px;
+    }
+    .job-title{
+        font-size: 26px;
+    }
     .project-container{
         all: unset;
         img{
@@ -281,33 +282,31 @@ a{
             font-size: 26px;
         }
     }
-    .precard{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .name-holder{
-        align-self: flex-start;
-        width: 100%;
-    }
     .card{
-        flex-direction: column;
-        width: 85%;
-        height: 500px;
+        height: 400px;
         padding-bottom: 5px;
+        flex-direction: column;
         img{
             margin: 0;
-            max-height: 225px;
+            height: auto;
+            width: 100%;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0;
         }
         .me{
-            all:unset;
+            height: 60%;
         }
         .links{
-            height: 50%;
-            width: 75%;
+            width: 100%;
             align-items: center;
-            #resume-link, #email-link, #linkedin-link {
-                width: 200px;
+            flex-direction: row;
+            height: 40%;
+            padding: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 10px;
+            gap: 0;
+            a{
+                height: 40%;
             }
         }
         h2{
