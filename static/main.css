@@ -152,9 +152,9 @@ nav{
         margin-bottom: 10px;
     }
     .left {
-        flex: 0 0 40%;       /* fixed width for all images */
+        flex: 0 0 40%;
         height: 100%;
-        overflow: hidden;      /* ensures image doesn't overflow corners */
+        overflow: hidden;
     }
     .right {
         margin-right: 30px;
@@ -164,7 +164,7 @@ nav{
     .left img {
         width: 100%;
         height: 100%;
-        object-fit: cover;     /* fills container, maintains aspect ratio, crops if needed */
+        object-fit: cover;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         transition: transform 0.5s ease;
@@ -188,8 +188,8 @@ nav{
 .project:hover .right h2,
 .project:hover .right p,
 .project:hover .right a {
-    transform: translateX(5px);            /* small shift right */
-    opacity: 0.95;                         /* slightly more prominent */
+    transform: translateX(5px);
+    opacity: 0.95;
 }
 
 .project-container{
@@ -272,6 +272,8 @@ a{
     }
     .project-container{
         all: unset;
+        display: flex;
+        flex-direction: column;
         img{
             margin: 15px 0;
             width: 100%;
