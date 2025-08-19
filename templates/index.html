@@ -3,32 +3,45 @@
 {% include "header.html" %}
 <body>
     <main>
+        <h1 class ="name">Diego Perez</h1>
+        <h2 class="job-title">Gameplay Programmer</h2>
         <div class = "card-holder">
-            <div class="precard">
-                <div class="name-holder">
-                    <h1>Diego Perez</h1>
-                    <h2>Software Engineer</h2>
-                </div>
-                <div class="card">
+            <div class="card">
                 <div class="me">
                     <img src="/static/Headshot.jpg" alt="Diego's Headshot">
                 </div>
                 <div class = "links">
-                    <a href="https://drive.google.com/file/d/1ih5eqKvnmu2JFIs6GeXLbAP-8bxtwbL3/view?usp=drive_link" id="resume-link" target="_blank" rel="noopener noreferrer">Resume</a>
-                    <a href="mailto:perez.diego@utah.edu" id="email-link">Email</a>
-                    <a href="https://www.linkedin.com/in/diego-perez-uu" id="linkedin-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://drive.google.com/file/d/1ih5eqKvnmu2JFIs6GeXLbAP-8bxtwbL3/view?usp=drive_link" id="resume-link" target="_blank" rel="noopener noreferrer">
+                        <img src="/static/resume.png" alt="link to email">
+                    </a>
+                    <a href="mailto:dpuu26@gmail.com" id="email-link">
+                        <img src="/static/email(1).png" alt="link to email">
+                    </a>
+                    <a href="https://www.linkedin.com/in/diego-perez-uu" id="linkedin-link" target="_blank" rel="noopener noreferrer">
+                        <img src="/static/linkedin.png" alt="link to email">
+                    </a>
                 </div>
             </div>
-            </div>
         </div>
-        <h1 class="section-title" id="project-title"> Projects </h1>
-        <div class="project-holder">
-            <div class = "projects">
+        <div class="main-content">
+            <div class="project-holder">
                 {% for project in projects %}
-                    <a class = "project" href="/{{ project.title }}">
-                        <img src = "{{ project.thumbnail.url }}" alt = "thumbnail for {{ project.title }}">
-                        <h2> {{ project.title }}</h2>
-                    </a>
+                    {% if not project.archived %}
+                        <a class = "project" href="/{{ project.title }}">
+                            <div class="left">
+                                <img src = "{{ project.thumbnail.url }}" alt = "thumbnail for {{ project.title }}">
+                            </div>
+                            <div class="right">
+                                <h2> {{ project.title }}</h2>
+                                <p class="skills">
+                                    {% for skill in project.skills.all %}
+                                        {{ skill.name }}{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </p>
+                                <p>{{ project.short_description }}</p>
+                            </div>
+                        </a>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>

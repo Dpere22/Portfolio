@@ -5,14 +5,24 @@ from django.db import models
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
 
-# Create your models here.
+
+class Skill(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
+    short_description = models.TextField(default="", blank=True, max_length=500)
     thumbnail = models.ImageField(blank=True, null=True)
-    ## need a way for a list of images maybe
+    skills = models.ManyToManyField(Skill, related_name="projects")
+    archived = models.BooleanField(default=False)
     def __str__(self):
         return self.title
+
+
 
 @receiver(post_delete, sender=Project)
 def delete_image_on_project_delete(sender, instance, **kwargs):
