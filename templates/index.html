@@ -34,9 +34,8 @@
                             <div class="right">
                                 <h2> {{ project.title }}</h2>
                                 <p class="skills">
-                                    Skills:
                                     {% for skill in project.skills.all %}
-                                        {{ skill.name }}
+                                        {{ skill.name }}{% if not forloop.last %}, {% endif %}
                                     {% endfor %}
                                 </p>
                                 <p>{{ project.short_description }}</p>
