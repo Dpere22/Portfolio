@@ -29,27 +29,25 @@ main{
     text-align: center;
 }
 nav{
-    .nav-left{
-        display: flex;
-        flex-direction: row;
-    }
     background-color: #6c4297;
     padding: 10px 3%;
-    margin: 20px 120px 20px;
+    margin:20px 120px 20px;
     height: 35px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     border-radius: 10px;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 30px;
     a{
         color: white;
         text-decoration: none;
         font-size: 26px;
-        margin-right: 30px;
         font-weight: bold;
     }
-
+    .contact-link{
+        margin-left: auto;
+    }
 }
 .card{
     color: white;
@@ -292,6 +290,15 @@ a{
     }
     nav{
         margin: 15px 10px 0;
+        justify-content: space-between;
+        gap: 0;
+        padding: 10px 4%;
+        a{
+            margin: 0;
+        }
+        .contact-link{
+            margin-left: 0;
+        }
     }
     .card-holder{
         h1 {
