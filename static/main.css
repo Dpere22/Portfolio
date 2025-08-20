@@ -30,7 +30,7 @@ main{
 }
 nav{
     background-color: #6c4297;
-    padding: 10px 2%;
+    padding: 10px 3%;
     margin:20px 120px 20px;
     height: 35px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -45,7 +45,9 @@ nav{
         font-size: 26px;
         font-weight: bold;
     }
-
+    .contact-link{
+        margin-left: auto;
+    }
 }
 .card{
     color: white;
@@ -293,6 +295,9 @@ a{
         padding: 10px 4%;
         a{
             margin: 0;
+        }
+        .contact-link{
+            margin-left: 0;
         }
     }
     .card-holder{
