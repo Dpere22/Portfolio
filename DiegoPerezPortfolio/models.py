@@ -19,6 +19,11 @@ class Project(models.Model):
     thumbnail = models.ImageField(blank=True, null=True)
     skills = models.ManyToManyField(Skill, related_name="projects")
     archived = models.BooleanField(default=False)
+    rank = models.PositiveIntegerField(unique=True, null=True, blank=True)
+
+    class Meta:
+        ordering = ["rank"]
+
     def __str__(self):
         return self.title
 
