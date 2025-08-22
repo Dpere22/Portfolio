@@ -17,7 +17,7 @@ main{
 }
 .name{
     color: white;
-    font-size: 64px;
+    font-size: 54px;
     text-align: center;
     margin-bottom: 0;
     margin-top: 0;
@@ -25,7 +25,7 @@ main{
 .job-title{
     margin-top: 0;
     color:white;
-    font-size: 36px;
+    font-size: 28px;
     text-align: center;
 }
 nav{
@@ -49,69 +49,49 @@ nav{
         margin-left: auto;
     }
 }
-.card{
-    color: white;
-    text-align: center;
-    border-radius: 70px;
-    padding-top: 0;
-    margin-top: 0;
-    justify-self: center;
-    display: flex;
-    flex-direction: row;
-    height: 250px;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    h1{
-        margin: 0;
-        font-size: 30px;
-    }
-    img{
-        max-height: 100%;
-        height: auto;
-        width: auto;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-    }
-    .me{
-        height: 100%;
-    }
-    .links{
-        padding-right: 5%;
-        padding-left: 5%;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        align-content: space-between;
-        justify-content: center;
-        background-color: white;
-        gap: 20px;
-        a{
-            height: 25%;
-            text-decoration: none;
-            transition: box-shadow 0.1s ease;
-            font-size: 20px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            border-radius: 20px;
-            img{
-                border-radius: 0;
-            }
-        }
-    }
-    a:hover{
-        transform: scale(1.2);
-    }
-}
 
 .card-holder{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
+    img{
+        width: 25%;
+        height: auto;
+        border-radius: 10%;
+        margin-bottom: 20px;
+    }
+    menu{
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        width: 20%;
+        background-color: white;
+        list-style: none;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px 0;
+        justify-content: space-around;
+        li{
+            display: flex;
+            height: 80%;
+            width: 25%;
+            a{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            a:hover {
+                transform: scale(1.2);
+                transition: transform 0.5s ease;
+            }
+            img{
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
 }
 
 .main-content{
@@ -167,7 +147,7 @@ nav{
         border-bottom-left-radius: 10px;
         transition: transform 0.5s ease;
     }
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .project:hover{
@@ -301,42 +281,11 @@ a{
         }
     }
     .card-holder{
-        h1 {
-            font-size: 26px;
-        }
-    }
-    .card{
-        height: 400px;
-        padding-bottom: 5px;
-        flex-direction: column;
-        width: 80%;
         img{
-            margin: 0;
-            height: 100%;
-            width: 100%;
-            border-top-right-radius: 10px;
-            border-bottom-left-radius: 0;
+            width: 80%;
         }
-        .me{
-            height: 60%;
-        }
-        .links{
-            width: 100%;
-            align-items: center;
-            flex-direction: row;
-            height: 40%;
-            padding: 0;
-            border-top-right-radius: 0;
-            border-bottom-left-radius: 10px;
-            gap: 0;
-            a{
-                height: 40%;
-                width: 20%;
-            }
-        }
-        h2{
-            font-size: 18px;
-            margin-bottom: 0;
+        menu{
+            width: 80%;
         }
     }
     iframe{
